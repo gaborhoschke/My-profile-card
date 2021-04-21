@@ -43,6 +43,8 @@ table {
 	border-spacing: 0;
 }
 
+/* ==== BASE STYLES ==== */
+
 * {
 	box-sizing: border-box;
     padding: 20%;
@@ -64,16 +66,30 @@ body {
 
 .profile-card {
     height: auto;
-	width: 70%;
-	max-width: calc(100vw - 40%);
-	margin: 0 auto;
-	padding: 0.525rem;
+	  width: 60%;
+  	max-width: calc(100vw - 50%);
+  	margin: 0 auto;
+	  padding: 0.525rem;
     background-color: rgba(255, 255, 255, 0.096);
     border-radius: 0.925rem;
     box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
     position: relative;
     left: 20%;
+    top: -100px;
   }
+
+.links {
+  height: auto;
+width: 20%;
+max-width: calc(100vw - 70%);
+margin: 0 auto;
+padding: 0.525rem;
+  background-color: rgba(255, 255, 255, 0.096);
+  border-radius: 0.925rem;
+  box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
+  position: relative;
+  top: -100px;
+}
 
 h1 {
     font-family: "Roboto", sans, sans-serif;
@@ -91,7 +107,6 @@ h1 {
 .social-icon:link, social-icon:visited {
     color: rgb(16, 122, 192);
     text-align: center;
-    display: inline-block;
   }
   
   a:hover, a:active {
@@ -99,16 +114,19 @@ h1 {
       filter: contrast(300%);
   }
   
-  .head, .links {
+  .head {
     text-align: center;
   }
   .contact-me {
       padding: 10pt;
+      font-family: arial;
+      font-weight: 700;
+      color:rgba(43, 45, 199, .8)
   }
   img {
     width: 120px;
     height: 120px;
-    border:rgba(0, 0, 0, 0.979)
+    border:#21299bfa;
     padding: 2px;
     background-color: #666;
     transition: all 0.9s ease-in-out;
@@ -146,9 +164,7 @@ h1 {
   }
   
   li {
-    display: inline;
+    display: block;
     letter-spacing: 2rem;
+    padding: 10pt;
   }
-  
-  
-  
