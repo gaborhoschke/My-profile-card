@@ -43,15 +43,30 @@ table {
 	border-spacing: 0;
 }
 
+/*=== HELPING COLORS OF BOXES ===*/
+
+.profile-card {
+  background-color: hsla(60, 100%, 50%, .4)
+}
+
+.content {
+ background-color: hsla(273, 100%, 25%, .4)
+}
+
+.links {
+  background-color: hsla(120, 100%, 25%, .4);
+}
+
 /* ==== BASE STYLES ==== */
 
 * {
-	box-sizing: border-box;
-    padding: 20%;
+    box-sizing: border-box;
+    padding: 10%;
+    margin: 0 auto;
 }
 
 body {
-  font-family: 'Roboto', serif, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,48 +75,80 @@ body {
   padding: 0.3125rem;
   background: url(assets/salmon_antracit.jpg) no-repeat center center fixed;
   background-size: cover;
-  height: 100vh-30;
+  height: calc(100vh - 10%);
   width: 100vw;
+  position: relative;
+}
+
+
+
+/* ==== Layout Styles ==== */
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr,
+img,
+.links, .content, .profile-card {
+    margin-bottom: 1rem;
 }
 
 .profile-card {
     height: auto;
-	  width: 60%;
-  	max-width: calc(100vw - 50%);
+	  width: 70%;
+  	max-width: calc(100vw - 30%);
   	margin: 0 auto;
 	  padding: 0.525rem;
-    background-color: rgba(255, 255, 255, 0.096);
+    background-color: rgba(255, 255, 255, 0.432);
+    border-radius: 0.925rem;
+    box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
+}
+
+.content {
+    height: auto;
+    width:70%;
+    max-width: calc(100vw - 30%);
+    margin: 0 auto;
+	  padding: 5% 1%;
+    background-color: rgba(255, 255, 255, 0.144);
     border-radius: 0.925rem;
     box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
     position: relative;
-    left: 20%;
-    top: -100px;
-  }
+}
 
 .links {
-  height: auto;
-width: 20%;
-max-width: calc(100vw - 70%);
-margin: 0 auto;
-padding: 0.525rem;
-  background-color: rgba(255, 255, 255, 0.096);
-  border-radius: 0.925rem;
-  box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
-  position: relative;
-  top: -100px;
+    height: auto;
+    width: 70%;
+    max-width: calc(100vw - 30%);
+    text-align: center;
+    margin: 0 auto;
+    padding: 2% 2%;
+    background-color: rgba(169, 173, 189, 0.74);
+    border-radius: 0.925rem;
+    box-shadow: rgba(0, 0, 0, 0.979) 1.2rem 1.2rem 5rem;
+    position: relative;
+    margin-bottom: 1.25rem;
 }
 
 h1 {
-    font-family: "Roboto", sans, sans-serif;
-    font-size: 24pt;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
     font-weight: 800;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
 }
 
 .about {
     font-size: 1.2rem;
     font-weight: 600;
-    text-align: justify;
-    padding: 10pt;
+    text-align: center;
+    padding: 0.3125rem;
+}
+
+.head, .about {
+  margin-bottom: 10%;
 }
 
 .social-icon:link, social-icon:visited {
@@ -111,23 +158,26 @@ h1 {
   
   a:hover, a:active {
     transform: scale(1.5);
-      filter: contrast(300%);
+      filter: contrast(500%);
   }
   
   .head {
     text-align: center;
   }
+
   .contact-me {
-      padding: 10pt;
+      padding: 0.625rem;
       font-family: arial;
       font-weight: 700;
       color:rgba(43, 45, 199, .8)
   }
+
   img {
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    max-width: 100%;
+    height: 7.5rem;
     border:#21299bfa;
-    padding: 2px;
+    padding: 0.125rem;;
     background-color: #666;
     transition: all 0.9s ease-in-out;
     filter: grayscale(50%);
@@ -135,7 +185,7 @@ h1 {
   }
   
   .profile-image {
-    margin-top: 60px;
+    margin-top: 3.75rem;
   }
 
 
@@ -144,17 +194,11 @@ h1 {
     transform: scale(1.1);
       filter: opacity(90%)
   }
-  
-  @media (min-width: 768px) {
-      .profile-card {
-              top: 0;
-              width: 33.3%;
-          }
-  
+ 
   .name {
-    padding:20px;
-    font-size: 26pt;
-    letter-spacing: 10px;
+    padding:1.25rem;
+    font-size: 1.625rem;
+    letter-spacing: 0.625rem;
   }
   
   /* Contact links */
@@ -164,7 +208,48 @@ h1 {
   }
   
   li {
-    display: block;
+    display: inline-block;
     letter-spacing: 2rem;
-    padding: 10pt;
+    padding: 0.625rem;
   }
+
+  @media (max-width: 420px) {
+    .profile-card, .content, .links {
+      margin-bottom: 1.096%;
+      float: none;
+      width: auto;
+    }
+  
+  }
+  
+  
+  @media (min-width: 768px) {
+    .profile-card, .content {
+      background-color: rgba(118, 160, 236, 0.37);
+      max-width: 1025px;
+      width: 66.6%;
+      position: relative;
+      float: right;
+    }
+   
+    .links {
+      width: 33.3%;
+      position: absolute;
+      float: left;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    li {
+      display: block;
+    }
+  }
+  
+  
+    @media (min-width: 1025px) {
+      .profile-card {
+        background-color: rgba(65, 88, 131, 0.37);
+              
+      }
+    }
